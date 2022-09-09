@@ -44,14 +44,10 @@ public class Movie {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Movie movie = (Movie) o;
-        return id == movie.id && Double.compare(movie.voteAverage, voteAverage) == 0 && posterPath.equals(movie.posterPath);
+        if (o == null)return false;
+        if (o == this) return true;
+        return false;
+
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, posterPath, voteAverage);
-    }
 }
