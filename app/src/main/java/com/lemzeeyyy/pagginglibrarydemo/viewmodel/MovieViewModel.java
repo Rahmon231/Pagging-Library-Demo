@@ -9,12 +9,13 @@ import androidx.paging.PagingData;
 import androidx.paging.rxjava3.PagingRx;
 
 import com.lemzeeyyy.pagginglibrarydemo.model.Movie;
+import com.lemzeeyyy.pagginglibrarydemo.paging.MoviePagingSource;
 
 import io.reactivex.rxjava3.core.Flowable;
 import kotlinx.coroutines.CoroutineScope;
 
 public class MovieViewModel extends ViewModel {
-    public Flowable<PagingData<Movie>> moviePagingDataFlow;
+    public Flowable<PagingData<Movie>> moviePagingDataFlowable;
     public MovieViewModel(){
         init();
     }
